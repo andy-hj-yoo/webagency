@@ -19,6 +19,7 @@ const stats = [
 export default function Urgency() {
   return (
     <section className="bg-midnight px-14 py-25 max-md:px-6">
+      <div className="max-w-[1080px] mx-auto">
       <p className="font-[family-name:var(--font-outfit)] text-[10px] tracking-[0.2em] uppercase text-white/50 mb-3">
         Why Now
       </p>
@@ -53,6 +54,7 @@ export default function Urgency() {
             </p>
           </div>
         ))}
+      </div>
       </div>
     </section>
   );

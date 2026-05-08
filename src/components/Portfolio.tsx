@@ -7,6 +7,7 @@ const projects = [
 export default function Portfolio() {
   return (
     <section id="portfolio" className="bg-midnight px-14 py-20 max-md:px-6">
+      <div className="max-w-[1080px] mx-auto">
       <p className="font-[family-name:var(--font-outfit)] text-[10px] tracking-[0.2em] uppercase text-white mb-3">
         Selected Results
       </p>
@@ -52,6 +53,7 @@ export default function Portfolio() {
         </strong>
         입니다.
       </p>
+      </div>
     </section>
   );
 }

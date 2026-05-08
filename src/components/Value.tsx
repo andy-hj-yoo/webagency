@@ -16,6 +16,7 @@ const reviews = [
 export default function Value() {
   return (
     <section className="bg-midnight px-14 py-25 max-md:px-6">
+      <div className="max-w-[1080px] mx-auto">
       {/* Value copy */}
       <div className="text-center mb-20">
         <h2 className="font-[family-name:var(--font-outfit)] text-[60px] max-md:text-[32px] font-extralight tracking-[-0.03em] leading-[1.25] text-white mb-5">
@@ -56,6 +57,7 @@ export default function Value() {
             </span>
           </div>
         ))}
+      </div>
       </div>
     </section>
   );

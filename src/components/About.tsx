@@ -7,6 +7,7 @@ const stats = [
 export default function About() {
   return (
     <section id="about" className="px-14 py-25 max-md:px-6 border-t border-ink/8">
+      <div className="max-w-[1080px] mx-auto">
       <p className="font-[family-name:var(--font-outfit)] text-[10px] tracking-[0.2em] uppercase text-ink mb-12">
         About Us
       </p>
@@ -43,6 +44,7 @@ export default function About() {
             </div>
           ))}
         </div>
+      </div>
       </div>
     </section>
   );

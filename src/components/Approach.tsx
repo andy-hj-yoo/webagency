@@ -45,6 +45,7 @@ const services = [
 export default function Approach() {
   return (
     <section className="px-14 py-25 max-md:px-6 border-t border-ink/8">
+      <div className="max-w-[1080px] mx-auto">
       <p className="font-[family-name:var(--font-outfit)] text-[10px] tracking-[0.2em] uppercase text-ink mb-3">
         Our Approach
       </p>
@@ -144,6 +145,7 @@ export default function Approach() {
           <br />
           중국, 대만은 상담 진행 후 설명 도와드리고 있습니다.
         </p>
+      </div>
       </div>
     </section>
   );

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Praxia Labs — Profile Text Logo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #E8E8E8; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+
+  .canvas {
+    position: relative;
+    width: 1080px;
+    height: 1080px;
+    background: #FFFFFF;
+    overflow: hidden;
+  }
+
+  /* Logo group — absolutely positioned, horizontally centered */
+  .logo-group {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1080px;
+    height: 1080px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .logo-praxia {
+    font-family: 'Outfit', sans-serif;
+    font-size: 116px;
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    color: #1A1A2E;
+    line-height: 1;
+  }
+
+  .logo-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3D3456, #C08497);
+    margin: 24px 18px 0 20px;
+    flex-shrink: 0;
+  }
+
+  .logo-labs {
+    font-family: 'Outfit', sans-serif;
+    font-size: 116px;
+    font-weight: 300;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    background: linear-gradient(135deg, #3D3456, #C08497);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Subtle accent line below the logo */
+  .accent-line {
+    position: absolute;
+    top: 606px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 280px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(61, 52, 86, 0.12), transparent);
+  }
+
+  /* Instagram circle crop guide — remove for final export */
+  .crop-guide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1080px;
+    height: 1080px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px rgba(26, 26, 46, 0.04);
+    pointer-events: none;
+  }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="crop-guide"></div>
+  <div class="logo-group">
+    <span class="logo-praxia">Praxia</span>
+    <div class="logo-dot"></div>
+    <span class="logo-labs">Labs</span>
+  </div>
+  <div class="accent-line"></div>
+</div>
+</body>
+</html>

@@ -11,7 +11,7 @@ import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
-    <div className="max-w-[1200px] mx-auto">
+    <>
       <Nav />
       <main>
         <Hero />
@@ -24,6 +24,6 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
-    </div>
+    </>
   );
 }

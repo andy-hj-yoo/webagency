@@ -3,6 +3,7 @@ const KAKAO_URL = '#contact';
 export default function Hero() {
   return (
     <section className="px-14 pt-18 pb-25 max-md:px-6">
+      <div className="max-w-[1080px] mx-auto">
       <p className="font-[family-name:var(--font-outfit)] text-sm font-light text-plum tracking-[0.06em] mb-6">
         We don&apos;t compromise.
       </p>
@@ -38,6 +39,7 @@ export default function Hero() {
           →
         </span>
       </a>
+      </div>
     </section>
   );
 }
