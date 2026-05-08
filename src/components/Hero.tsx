@@ -24,7 +24,7 @@ export default function Hero() {
         아직도 속고 계신가요?
         <br />
         <br />
-        <strong className="font-bold">3분만 보세요.</strong>
+        <strong className="font-bold">원장님, 3분만 보세요.</strong>
         <br />
         왜 프랙시아랩스가 정답인지 알게 되실 겁니다.
       </p>
