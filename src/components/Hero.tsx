@@ -7,17 +7,19 @@ export default function Hero() {
         We don&apos;t compromise.
       </p>
 
-      <h1 className="text-[48px] max-md:text-[30px] font-extralight leading-[1.55] tracking-[-0.02em] text-midnight mb-5 max-w-[720px]">
-        <span className="font-bold text-plum">죄송합니다.</span>
+      <h1 className="text-[48px] max-md:text-[30px] font-extralight leading-[1.55] tracking-[-0.02em] text-midnight mb-5 max-w-[780px]">
+        강남 130평 클리닉 개원 5개월,
         <br />
-        대표님은 사업에만 집중해주세요
+        <span className="font-bold text-plum">월매출 10억 초과 달성</span> 실무자가
         <br />
-        <span className="font-bold text-plum">자동화</span>와{' '}
-        <span className="font-bold text-plum">개발</span>은 저희가 하겠습니다.
+        직접 올인원으로{' '}
+        <span className="font-bold text-plum">외국인 유치</span> 도와드립니다.
       </h1>
 
       <p className="text-sm font-normal leading-[1.85] text-ink max-w-[460px] mb-11">
-        비싼 개발비, 긴 완성시간, 낮은 디자인 수준,
+        효과 없는 인플루언서 마케팅,
+        <br />
+        비싼 개발비, 낮은 퀄리티,
         <br />
         아직도 속고 계신가요?
         <br />
