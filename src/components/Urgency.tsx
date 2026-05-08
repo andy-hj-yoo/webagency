@@ -55,6 +55,16 @@ export default function Urgency() {
           </div>
         ))}
       </div>
+
+      <a
+        href="#marketing"
+        className="inline-flex items-center gap-3 font-[family-name:var(--font-outfit)] text-[13px] font-medium tracking-[0.06em] text-white border-b border-white/30 pb-0.5 mt-10 group hover:border-plum-light transition-colors"
+      >
+        방법 궁금하신가요?
+        <span className="flex items-center justify-center w-[34px] h-[34px] rounded-full border border-white/30 text-sm transition-all group-hover:bg-plum group-hover:border-plum">
+          →
+        </span>
+      </a>
       </div>
     </section>
   );
