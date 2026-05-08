@@ -4,11 +4,13 @@
   --midnight: #1A1A2E;
   --plum: #3D3456;
   --rose: #C08497;
+  --plum-light: #6B5B95;
   --pure: #ffffff;
   --ink: #1A1A2E;
   --border: rgba(26, 26, 46, 0.08);
 
   --gradient: linear-gradient(135deg, #3D3456, #C08497);
+  --gradient-dark: linear-gradient(135deg, #6B5B95, #C08497);
 
   --background: var(--pure);
   --foreground: var(--ink);
@@ -22,6 +24,7 @@
   --color-rose-a: var(--rose);
   --color-pure: var(--pure);
   --color-ink: var(--ink);
+  --color-plum-light: var(--plum-light);
 }
 
 ::selection {

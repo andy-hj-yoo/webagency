@@ -17,6 +17,7 @@
   --ink: #1A1A2E;
   --border: rgba(26,26,46,0.08);
   --gradient: linear-gradient(135deg, #3D3456, #C08497);
+  --gradient-dark: linear-gradient(135deg, #6B5B95, #C08497);
 }
 ::selection { background: #3D3456; color: #fff; }
 body { background: #f8f8f8; color: var(--ink); font-family: 'Pretendard', sans-serif; -webkit-font-smoothing: antialiased; }
@@ -63,6 +64,7 @@ body { background: #f8f8f8; color: var(--ink); font-family: 'Pretendard', sans-s
 /* Dark preview */
 .dark-preview { background: var(--midnight); padding: 40px; margin-top: 20px; }
 .dark-preview .btn-light { background: #fff; color: var(--midnight); }
+.dark-preview .btn-grad { background: linear-gradient(135deg, #6B5B95, #C08497); }
 .dark-preview .btn-outline-d { background: none; border: 1px solid rgba(255,255,255,0.1); color: #fff; }
 .dark-preview .btn-ghost-d { background: none; color: #fff; padding: 12px 0; border-bottom: 1px solid rgba(61,52,86,0.5); border-top: none; border-left: none; border-right: none; }
 
@@ -80,7 +82,7 @@ body { background: #f8f8f8; color: var(--ink); font-family: 'Pretendard', sans-s
 .quote-text { font-family: 'Pretendard', sans-serif; font-size: 17px; font-weight: 100; line-height: 1.7; }
 .quote-text strong { font-weight: 700; color: var(--plum); }
 .quote-dark .quote-text { color: #fff; }
-.quote-dark .quote-text strong { font-weight: 700; background: linear-gradient(135deg, #3D3456, #C08497); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.quote-dark .quote-text strong { font-weight: 700; background: linear-gradient(135deg, #6B5B95, #C08497); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 
 /* Emphasis comparison */
 .emphasis-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); }
@@ -88,7 +90,7 @@ body { background: #f8f8f8; color: var(--ink); font-family: 'Pretendard', sans-s
 .emphasis-label { font-family: 'Outfit', sans-serif; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); margin-bottom: 16px; }
 .emphasis-demo { font-family: 'Pretendard', sans-serif; font-size: 18px; font-weight: 100; line-height: 1.7; color: var(--midnight); }
 .emphasis-demo .solid { font-weight: 700; color: var(--plum); }
-.emphasis-demo .grad { font-weight: 700; background: linear-gradient(135deg, #3D3456, #C08497); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.emphasis-demo .grad { font-weight: 700; background: linear-gradient(135deg, #6B5B95, #C08497); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 
 /* Selection demo */
 .selection-demo { background: #fff; padding: 32px; border: 1px solid var(--border); }
@@ -131,8 +133,8 @@ body { background: #f8f8f8; color: var(--ink); font-family: 'Pretendard', sans-s
     </div>
     <div style="background: var(--midnight); padding: 20px; display: inline-flex; align-items: center; gap: 0; border-radius: 4px;">
       <span style="font-family: 'Outfit', sans-serif; font-size: 17px; font-weight: 400; color: #fff;">Praxia</span>
-      <span style="width: 4px; height: 4px; border-radius: 50%; background: linear-gradient(135deg, #3D3456, #C08497); margin-left: 8px;"></span>
-      <span style="font-family: 'Outfit', sans-serif; font-size: 17px; font-weight: 300; background: linear-gradient(135deg, #3D3456, #C08497); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-left: 6px;">Labs</span>
+      <span style="width: 4px; height: 4px; border-radius: 50%; background: linear-gradient(135deg, #6B5B95, #C08497); margin-left: 8px;"></span>
+      <span style="font-family: 'Outfit', sans-serif; font-size: 17px; font-weight: 300; background: linear-gradient(135deg, #6B5B95, #C08497); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-left: 6px;">Labs</span>
     </div>
   </div>
 
@@ -153,13 +155,31 @@ body { background: #f8f8f8; color: var(--ink); font-family: 'Pretendard', sans-s
         <span class="name" style="color: var(--ink);">White — background</span>
       </div>
     </div>
+    <div class="color-grid" style="grid-template-columns: 1fr 1fr; margin-top: 2px;">
+      <div class="color-chip" style="background: #6B5B95;">
+        <span class="hex" style="color: #fff;">#6B5B95</span>
+        <span class="name" style="color: #fff;">Plum Light — dark mode gradient start</span>
+      </div>
+      <div class="color-chip" style="background: #C08497;">
+        <span class="hex" style="color: #fff;">#C08497</span>
+        <span class="name" style="color: #fff;">Dusty Rose — gradient end</span>
+      </div>
+    </div>
+    <div style="font-family: 'Outfit'; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(26,26,46,0.4); margin-top: 20px; margin-bottom: 8px;">Light Mode Gradient — #3D3456 → #C08497</div>
     <div class="gradient-row">
       <div class="gradient-bar" style="background: linear-gradient(135deg, #3D3456, #C08497);"><span>135° — Default</span></div>
       <div class="gradient-bar" style="background: linear-gradient(90deg, #3D3456, #C08497);"><span>90°</span></div>
       <div class="gradient-bar" style="background: linear-gradient(180deg, #3D3456, #C08497);"><span>180°</span></div>
     </div>
+    <div style="font-family: 'Outfit'; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(26,26,46,0.4); margin-top: 20px; margin-bottom: 8px;">Dark Mode Gradient — #6B5B95 → #C08497</div>
+    <div class="gradient-row">
+      <div class="gradient-bar" style="background: linear-gradient(135deg, #6B5B95, #C08497);"><span>135° — Default</span></div>
+      <div class="gradient-bar" style="background: linear-gradient(90deg, #6B5B95, #C08497);"><span>90°</span></div>
+      <div class="gradient-bar" style="background: linear-gradient(180deg, #6B5B95, #C08497);"><span>180°</span></div>
+    </div>
     <div style="font-family: 'Pretendard'; font-size: 12px; color: var(--ink); line-height: 1.8; margin-top: 16px;">
-      배경은 흰색, 텍스트는 #1A1A2E. 강조는 #3D3456 단색 또는 그라데이션. 그 외 색 없음.
+      배경은 흰색, 텍스트는 #1A1A2E. 강조는 #3D3456 단색 또는 그라데이션.<br>
+      다크 섹션에서는 그라데이션 시작점을 #6B5B95로 대체하여 가시성 확보.
     </div>
   </div>
 
@@ -175,7 +195,7 @@ body { background: #f8f8f8; color: var(--ink); font-family: 'Pretendard', sans-s
       <div class="emphasis-card" style="background: var(--midnight);">
         <div class="emphasis-label" style="color: #fff;">Dark — Gradient</div>
         <div class="emphasis-demo" style="color: #fff;">저희가 포기할 수 없는<br><span class="grad">가치입니다</span></div>
-        <div style="font-family: 'Outfit'; font-size: 10px; color: rgba(255,255,255,0.5); margin-top: 12px;">강조 = gradient text</div>
+        <div style="font-family: 'Outfit'; font-size: 10px; color: rgba(255,255,255,0.5); margin-top: 12px;">강조 = #6B5B95 → #C08497 gradient</div>
       </div>
     </div>
   </div>

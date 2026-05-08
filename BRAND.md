@@ -11,23 +11,29 @@
 |-------|-----|-------------|----------|-------|
 | Midnight | `#1A1A2E` | `--midnight` | `midnight` | Primary text, dark section bg |
 | Plum | `#3D3456` | `--plum` | `plum` | Emphasis (light mode), accent |
+| Plum Light | `#6B5B95` | `--plum-light` | `plum-light` | Dark mode gradient 시작점 only |
 | Dusty Rose | `#C08497` | `--rose` | `rose-a` | Gradient endpoint only |
 | White | `#FFFFFF` | `--pure` | `white` | Light section bg |
 | Border | `rgba(26,26,46,0.08)` | `--border` | `border-ink/8` | Borders, dividers |
 
-### Gradient (단일 규칙)
+### Gradient (Light / Dark 분리)
 ```css
+/* Light mode — 밝은 배경 위 */
 background: linear-gradient(135deg, #3D3456, #C08497);
+
+/* Dark mode — 어두운 배경 위 */
+background: linear-gradient(135deg, #6B5B95, #C08497);
 ```
 - 135° 기본, 90°/180° 허용
-- 용도: CTA 버튼, 다크모드 텍스트 강조, 로고 "Labs" 텍스트
-- **그 외 색 없음. 3색 + 그라데이션만 사용.**
+- 용도: CTA 버튼, 텍스트 강조, 로고 "Labs" 텍스트
+- **그 외 색 없음. 4색(Midnight, Plum, Plum Light, Rose) + 그라데이션만 사용.**
+- `#6B5B95`는 **다크 섹션 전용** — 밝은 배경에서 절대 사용 금지
 
 ### Light vs Dark 강조 규칙
 | Context | Emphasis Style |
 |---------|---------------|
 | Light section | `color: #3D3456` (Plum 단색) |
-| Dark section | `background: linear-gradient(135deg, #3D3456, #C08497)` + `background-clip: text` |
+| Dark section | `background: linear-gradient(135deg, #6B5B95, #C08497)` + `background-clip: text` |
 
 ### Selection (드래그) 색상
 ```css
@@ -59,7 +65,7 @@ background: linear-gradient(135deg, #3D3456, #C08497);
 
 ### 강조 규칙
 - Light mode bold: `font-weight: 700; color: var(--plum);`
-- Dark mode bold: `font-weight: 700; gradient text`
+- Dark mode bold: `font-weight: 700; gradient text (#6B5B95→#C08497)`
 - Labels: 항상 `uppercase`, `letter-spacing ≥ 0.1em`
 
 ---
@@ -78,7 +84,7 @@ background: linear-gradient(135deg, #3D3456, #C08497);
 | Variant | Class Pattern | Style |
 |---------|--------------|-------|
 | Primary | `btn-light` | `bg: #fff, color: #1A1A2E` |
-| Gradient | `btn-grad` | `bg: gradient, color: #fff` |
+| Gradient | `btn-grad` | `bg: dark gradient (#6B5B95→#C08497), color: #fff` |
 | Outline | `btn-outline` | `border: 1px solid white/10` |
 | Ghost | `btn-ghost` | `no bg, border-bottom: 1px solid plum/50` |
 
@@ -130,7 +136,7 @@ background: linear-gradient(135deg, #3D3456, #C08497);
 |---------|-------|------|
 | Background | `#FFFFFF` | `#1A1A2E` |
 | Text | `#1A1A2E` | `#FFFFFF` |
-| Emphasis | Plum solid | Gradient text |
+| Emphasis | Plum solid (`#3D3456`) | Gradient text (`#6B5B95→#C08497`) |
 | Border/grid gap | `rgba(26,26,46,0.08)` | `rgba(255,255,255,0.05)` |
 | Card bg | `#FFFFFF` | `rgba(255,255,255,0.03)` |
 
