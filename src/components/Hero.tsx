@@ -13,7 +13,7 @@ export default function Hero() {
         <span className="font-bold text-plum">월매출 10억 초과 달성,</span>
         <br />
         올인원{' '}
-        <span className="font-bold text-plum">외국인 유치</span> 도와드리겠습니다.
+        <span className="font-bold text-plum">외국인 환자 유치</span>
       </h1>
 
       <p className="text-sm font-normal leading-[1.85] text-ink max-w-[460px] mb-11">
