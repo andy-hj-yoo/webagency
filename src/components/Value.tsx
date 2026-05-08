@@ -70,6 +70,38 @@ const reviews = [
     rating: 5,
     date: '2026.01',
   },
+  {
+    quote: '반응형 웹이 이렇게 깔끔하게 나올 줄 몰랐어요. 모바일에서 예약하는 외국인 환자가 확실히 늘었습니다.',
+    author: 'M원장',
+    clinic: '역삼동 피부과',
+    service: '웹사이트',
+    rating: 5,
+    date: '2026.04',
+  },
+  {
+    quote: '비용 구조를 전부 공개해주셔서 신뢰가 갔어요. 다른 대행사처럼 마진 숨기는 거 없이 투명하게 진행해주십니다.',
+    author: 'W원장',
+    clinic: '강남 성형외과',
+    service: '마케팅',
+    rating: 5,
+    date: '2026.05',
+  },
+  {
+    quote: '대표님이 직접 상담해주시고 직접 만들어주시니까 중간에 전달 오류가 없어요. 소통 스트레스가 제로였습니다.',
+    author: 'B원장',
+    clinic: '삼성동 피부과',
+    service: '웹사이트 + 마케팅',
+    rating: 5,
+    date: '2026.03',
+  },
+  {
+    quote: '퍼포먼스 마케팅까지 해주는 곳은 여기뿐이었어요. 리타겟팅 세팅해주신 이후로 전환율이 눈에 띄게 올랐습니다.',
+    author: 'N원장',
+    clinic: '청담 피부과',
+    service: '마케팅',
+    rating: 5,
+    date: '2026.04',
+  },
 ];
 
 function Stars({ count }: { count: number }) {
