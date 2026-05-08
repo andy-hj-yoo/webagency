@@ -39,7 +39,7 @@ export default function Services() {
             className="bg-white p-11 max-md:p-8 flex flex-col justify-between min-h-[220px]"
           >
             <div>
-              <span className="font-[family-name:var(--font-outfit)] text-[56px] font-extralight text-midnight/10 leading-none tracking-[-0.04em]">
+              <span className="font-[family-name:var(--font-outfit)] text-[56px] font-extralight text-midnight/30 leading-none tracking-[-0.04em]">
                 {s.num}
               </span>
               <h3 className="font-[family-name:var(--font-sora)] text-[13px] font-medium tracking-[0.04em] text-midnight mt-6 mb-2">
