@@ -16,7 +16,7 @@ export default function About() {
         {/* Copy */}
         <div>
           <h2 className="text-[38px] max-md:text-[26px] font-extralight leading-[1.5] tracking-[-0.02em] text-midnight mb-6 max-w-[480px]">
-            <span className="font-bold text-plum">강남 클리닉 월 매출 10억</span>을
+            <span className="font-bold text-plum">강남 클리닉 월매출 10억+</span>을
             <br />
             만든 사람이
             <br />

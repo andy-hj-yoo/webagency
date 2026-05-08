@@ -11,7 +11,7 @@ export default function Hero() {
       <h1 className="text-[48px] max-md:text-[30px] font-extralight leading-[1.55] tracking-[-0.02em] text-midnight mb-5 max-w-[780px]">
         강남 130평 클리닉 개원 5개월,
         <br />
-        <span className="font-bold text-plum">월매출 10억 초과 달성,</span>
+        <span className="font-bold text-plum">월매출 10억+ 달성,</span>
         <br />
         올인원{' '}
         <span className="font-bold text-plum">외국인 환자 유치</span>

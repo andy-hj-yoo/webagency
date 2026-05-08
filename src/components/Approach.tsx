@@ -27,18 +27,14 @@ const services = [
   {
     num: '01',
     title: '다국어 웹사이트 디자인 기획 및 개발',
+    desc: '브랜드 기획, UI/UX 디자인, 반응형 웹 개발, 다국어 SEO',
     href: '#services',
   },
   {
     num: '02',
     title: '영어권 마케팅 운영',
+    desc: '인플루언서 섭외·협상, 퍼포먼스 마케팅, 콘텐츠 기획',
     href: '#marketing',
-  },
-  {
-    num: '03',
-    title: '내부 운영 효율 및 자동화',
-    desc: 'CS 자동화, 매출 관리 대시보드',
-    href: '#automation',
   },
 ];
 
@@ -51,7 +47,7 @@ export default function Approach() {
       </p>
 
       <h2 className="text-[38px] max-md:text-[26px] font-extralight leading-[1.5] tracking-[-0.02em] text-midnight mb-16 max-w-[600px]">
-        <span className="font-bold text-plum">월 매출 10억 달성</span> 경험으로,
+        <span className="font-bold text-plum">월매출 10억+ 달성</span> 경험으로,
         <br />
         웹사이트 디자인 개발부터
         <br />
@@ -111,7 +107,7 @@ export default function Approach() {
       </div>
 
       {/* Services CTA */}
-      <div className="grid grid-cols-3 max-md:grid-cols-1 gap-px bg-ink/8">
+      <div className="grid grid-cols-2 max-md:grid-cols-1 gap-px bg-ink/8">
         {services.map((s) => (
           <a
             key={s.num}
