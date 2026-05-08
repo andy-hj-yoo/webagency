@@ -21,9 +21,9 @@ export default function Services() {
     <section id="services" className="px-14 py-20 max-md:px-6 border-t border-ink/8">
       <div className="text-center mb-14">
         <h2 className="font-[family-name:var(--font-outfit)] text-[60px] max-md:text-[32px] font-extralight tracking-[-0.03em] leading-[1.25] text-midnight mb-5">
-          Build <strong className="font-bold bg-gradient-to-br from-plum to-rose-a bg-clip-text text-transparent">Faster.</strong>
+          Share <strong className="font-bold bg-gradient-to-br from-plum to-rose-a bg-clip-text text-transparent">Clearer.</strong>
           <br />
-          Brand <strong className="font-bold bg-gradient-to-br from-plum to-rose-a bg-clip-text text-transparent">Sharper.</strong>
+          Build <strong className="font-bold bg-gradient-to-br from-plum to-rose-a bg-clip-text text-transparent">Sharper.</strong>
           <br />
           Scale <strong className="font-bold bg-gradient-to-br from-plum to-rose-a bg-clip-text text-transparent">Smarter.</strong>
         </h2>
