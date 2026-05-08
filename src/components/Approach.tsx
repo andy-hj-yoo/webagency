@@ -1,13 +1,26 @@
 const milestones = [
-  { date: '2025.10', label: '개원', highlight: false },
-  { date: '2025.12', label: '해외 마케팅 시작', highlight: false },
-  { date: '2026.01', label: '월매출 3억 돌파', highlight: false },
-  { date: '2026.03', label: '월매출 10억+ 달성', highlight: true },
-];
-
-const metrics = [
-  { num: '85%+', label: '해외 고객 매출 비중' },
-  { num: '30%+', label: '영어권 매출 비중' },
+  {
+    date: '2025.10',
+    label: '개원',
+    details: ['다국어 홈페이지 완성', '중국, 일본 마케팅 시작'],
+    highlight: false,
+  },
+  {
+    date: '2025.12',
+    label: '영어권 마케팅 시작',
+    highlight: false,
+  },
+  {
+    date: '2026.01',
+    label: '월매출 5.5억 돌파',
+    highlight: false,
+  },
+  {
+    date: '2026.03',
+    label: '월매출 10억+ 달성',
+    details: ['해외 고객 매출 비중 85%+', '영어권 매출 3억+'],
+    highlight: true,
+  },
 ];
 
 const services = [
@@ -75,24 +88,25 @@ export default function Approach() {
                 >
                   {m.label}
                 </p>
+                {m.details && (
+                  <ul className="mt-2 space-y-0.5">
+                    {m.details.map((d) => (
+                      <li
+                        key={d}
+                        className={`text-[11px] leading-[1.6] ${
+                          m.highlight ? 'text-plum/70' : 'text-ink/40'
+                        }`}
+                      >
+                        — {d}
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
             ))}
           </div>
         </div>
 
-        {/* Metrics */}
-        <div className="flex gap-px bg-ink/8 mt-12 max-w-[480px]">
-          {metrics.map((m) => (
-            <div key={m.label} className="bg-white flex-1 p-8">
-              <p className="font-[family-name:var(--font-outfit)] text-[36px] font-extralight text-midnight leading-none tracking-[-0.04em] mb-2">
-                {m.num}
-              </p>
-              <p className="font-[family-name:var(--font-outfit)] text-[10px] tracking-[0.08em] uppercase text-plum">
-                {m.label}
-              </p>
-            </div>
-          ))}
-        </div>
       </div>
 
       {/* Services CTA */}
