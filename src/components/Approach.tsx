@@ -78,7 +78,7 @@ export default function Approach() {
                       : 'bg-ink/20'
                   }`}
                 />
-                <p className="font-[family-name:var(--font-outfit)] text-[11px] tracking-[0.06em] text-ink/40 mb-1">
+                <p className="font-[family-name:var(--font-outfit)] text-[11px] tracking-[0.06em] text-ink/70 mb-1">
                   {m.date}
                 </p>
                 <p
@@ -117,7 +117,7 @@ export default function Approach() {
             href={s.href}
             className="bg-white p-10 max-md:p-8 flex flex-col justify-between min-h-[180px] group transition-colors hover:bg-midnight"
           >
-            <span className="font-[family-name:var(--font-outfit)] text-[40px] font-extralight text-midnight/10 leading-none tracking-[-0.04em] group-hover:text-white/10">
+            <span className="font-[family-name:var(--font-outfit)] text-[40px] font-extralight text-midnight/30 leading-none tracking-[-0.04em] group-hover:text-white/10">
               {s.num}
             </span>
             <div>
