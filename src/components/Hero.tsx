@@ -10,10 +10,10 @@ export default function Hero() {
       <h1 className="text-[48px] max-md:text-[30px] font-extralight leading-[1.55] tracking-[-0.02em] text-midnight mb-5 max-w-[780px]">
         강남 130평 클리닉 개원 5개월,
         <br />
-        <span className="font-bold text-plum">월매출 10억 초과 달성</span> 실무자가
+        <span className="font-bold text-plum">월매출 10억 초과 달성,</span>
         <br />
-        직접 올인원으로{' '}
-        <span className="font-bold text-plum">외국인 유치</span> 도와드립니다.
+        직접 올인원{' '}
+        <span className="font-bold text-plum">외국인 유치</span> 도와드리겠습니다.
       </h1>
 
       <p className="text-sm font-normal leading-[1.85] text-ink max-w-[460px] mb-11">
