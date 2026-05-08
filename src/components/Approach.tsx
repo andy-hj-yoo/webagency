@@ -93,8 +93,8 @@ export default function Approach() {
                     {m.details.map((d) => (
                       <li
                         key={d}
-                        className={`text-[11px] leading-[1.6] ${
-                          m.highlight ? 'text-plum/70' : 'text-ink/40'
+                        className={`text-[12px] font-medium leading-[1.7] ${
+                          m.highlight ? 'text-plum' : 'text-ink/60'
                         }`}
                       >
                         — {d}
