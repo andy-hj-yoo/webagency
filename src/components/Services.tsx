@@ -19,7 +19,7 @@ const services = [
 export default function Services() {
   return (
     <section id="services" className="px-14 py-20 max-md:px-6 border-t border-ink/8">
-      <div className="max-w-[1080px] mx-auto">
+      <div className="max-w-[900px] mx-auto">
       <div className="text-center mb-14">
         <h2 className="font-[family-name:var(--font-outfit)] text-[60px] max-md:text-[32px] font-extralight tracking-[-0.03em] leading-[1.25] text-midnight mb-5">
           Share <strong className="font-bold bg-gradient-to-br from-plum to-rose-a bg-clip-text text-transparent">Clearer.</strong>

@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer className="px-14 pt-25 pb-16 max-md:px-6">
-      <div className="max-w-[1080px] mx-auto">
+      <div className="max-w-[900px] mx-auto">
       <p className="font-[family-name:var(--font-outfit)] text-[120px] max-md:text-[56px] font-light tracking-[-0.04em] leading-[0.9] text-ink/8 select-none mb-6">
         Praxia
       </p>

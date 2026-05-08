@@ -3,7 +3,7 @@ const KAKAO_URL = 'https://pf.kakao.com/_placeholder';
 export default function Contact() {
   return (
     <section id="contact" className="bg-midnight px-14 py-25 max-md:px-6">
-      <div className="max-w-[1080px] mx-auto">
+      <div className="max-w-[900px] mx-auto">
       <div className="max-w-[600px] mx-auto text-center">
         <p className="font-[family-name:var(--font-outfit)] text-[10px] tracking-[0.2em] uppercase text-white/50 mb-8">
           Contact

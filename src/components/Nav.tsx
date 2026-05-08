@@ -14,7 +14,7 @@ export default function Nav() {
 
   return (
     <nav className="px-14 py-8 max-md:px-6">
-      <div className="max-w-[1080px] mx-auto flex items-center justify-between">
+      <div className="max-w-[900px] mx-auto flex items-center justify-between">
       <a href="#" className="flex items-center font-[family-name:var(--font-outfit)]">
         <span className="text-[17px] font-normal tracking-[0.04em] text-midnight">
           Praxia

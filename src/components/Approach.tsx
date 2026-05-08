@@ -45,7 +45,7 @@ const services = [
 export default function Approach() {
   return (
     <section className="px-14 py-25 max-md:px-6 border-t border-ink/8">
-      <div className="max-w-[1080px] mx-auto">
+      <div className="max-w-[900px] mx-auto">
       <p className="font-[family-name:var(--font-outfit)] text-[10px] tracking-[0.2em] uppercase text-ink mb-3">
         Our Approach
       </p>
