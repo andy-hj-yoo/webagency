@@ -145,9 +145,8 @@ background: linear-gradient(135deg, #6B5B95, #C08497);
 ## Logo
 
 - "Praxia" — Outfit 400, color: `--midnight`
-- Dot — 4×4px circle, gradient fill
-- "Labs" — Outfit 300, gradient text
-- Gap: `margin-left: 6px` (Labs), `margin-left: 8px` (dot)
+- "Labs" — Outfit 300, gradient text (plum → rose-a)
+- Gap: `margin-left: 6px` (Labs)
 
 ---
 

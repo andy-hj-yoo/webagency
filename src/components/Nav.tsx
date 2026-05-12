@@ -36,7 +36,6 @@ export default function Nav() {
         <span className="text-[17px] font-normal tracking-[0.04em] text-midnight">
           Praxia
         </span>
-        <span className="ml-2 h-1 w-1 rounded-full bg-gradient-to-br from-plum to-rose-a" />
         <span className="ml-1.5 text-[17px] font-light bg-gradient-to-br from-plum to-rose-a bg-clip-text text-transparent">
           Labs
         </span>
