@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=2200, initial-scale=1.0">
+<title>Business Card — Praxia Labs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #E8E8E8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 60px;
+    padding: 60px;
+  }
+
+  /* Card container — 1050×600px = 3.5:2 ratio (standard business card) */
+  /* At 300dpi this maps to approx 89mm × 51mm */
+
+  .card-wrapper {
+    position: relative;
+  }
+
+  .card-label {
+    position: absolute;
+    top: -36px;
+    left: 0;
+    font-family: 'Outfit', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #999999;
+  }
+
+  .card {
+    position: relative;
+    width: 1050px;
+    height: 600px;
+    overflow: hidden;
+    background: #FFFFFF;
+  }
+
+  /* ===========================
+     FRONT SIDE
+     =========================== */
+
+  .front {
+    background: #FFFFFF;
+  }
+
+  /* Bleed-safe content area: 60px padding on all sides */
+
+  /* Logo group — centered */
+  .front .logo-group {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1050px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .front .logo-praxia {
+    font-family: 'Outfit', sans-serif;
+    font-size: 52px;
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    color: #1A1A2E;
+    line-height: 1;
+  }
+
+  .front .logo-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3D3456, #C08497);
+    margin: 10px 8px 0 10px;
+    flex-shrink: 0;
+  }
+
+  .front .logo-labs {
+    font-family: 'Outfit', sans-serif;
+    font-size: 52px;
+    font-weight: 300;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    background: linear-gradient(135deg, #3D3456, #C08497);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Tagline — positioned below logo */
+  .front .tagline-group {
+    position: absolute;
+    top: 362px;
+    left: 0;
+    width: 1050px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .front .tagline-line {
+    font-family: 'Outfit', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 0.12em;
+    color: #3D3456;
+    line-height: 1.9;
+    text-transform: uppercase;
+    opacity: 0.7;
+  }
+
+  /* Subtle accent line between logo and tagline */
+  .front .accent-line {
+    position: absolute;
+    top: 340px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 1px;
+    background: linear-gradient(90deg, #3D3456, #C08497);
+    opacity: 0.3;
+  }
+
+  /* Top-right corner marker */
+  .front .corner-tr {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: 16px;
+    height: 16px;
+    border-top: 1px solid rgba(26,26,46,0.08);
+    border-right: 1px solid rgba(26,26,46,0.08);
+  }
+
+  /* Bottom-left corner marker */
+  .front .corner-bl {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    width: 16px;
+    height: 16px;
+    border-bottom: 1px solid rgba(26,26,46,0.08);
+    border-left: 1px solid rgba(26,26,46,0.08);
+  }
+
+  /* ===========================
+     BACK SIDE
+     =========================== */
+
+  .back {
+    background: #FFFFFF;
+  }
+
+  /* Small logo — top left */
+  .back .logo-small {
+    position: absolute;
+    top: 56px;
+    left: 72px;
+    display: flex;
+    align-items: center;
+    gap: 0;
+  }
+
+  .back .logo-small .logo-praxia {
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    color: #1A1A2E;
+    line-height: 1;
+  }
+
+  .back .logo-small .logo-dot {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3D3456, #C08497);
+    margin: 3px 4px 0 4px;
+    flex-shrink: 0;
+  }
+
+  .back .logo-small .logo-labs {
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    background: linear-gradient(135deg, #3D3456, #C08497);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Gradient accent bar — top right */
+  .back .accent-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4px;
+    height: 600px;
+    background: linear-gradient(180deg, #3D3456, #C08497);
+  }
+
+  /* Name block — inline */
+  .back .name-row {
+    position: absolute;
+    top: 160px;
+    left: 540px;
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+  }
+
+  .back .name-kr {
+    font-family: 'Pretendard', sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: #1A1A2E;
+    line-height: 1;
+  }
+
+  .back .name-en {
+    font-family: 'Outfit', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    color: #1A1A2E;
+    line-height: 1;
+  }
+
+  /* Title */
+  .back .title {
+    position: absolute;
+    top: 202px;
+    left: 540px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    color: #3D3456;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  /* Divider */
+  .back .divider {
+    position: absolute;
+    top: 240px;
+    left: 540px;
+    width: 440px;
+    height: 1px;
+    background: rgba(26,26,46,0.08);
+  }
+
+  /* Contact info block */
+  .back .contact-group {
+    position: absolute;
+    top: 268px;
+    left: 540px;
+  }
+
+  .back .contact-row {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 14px;
+  }
+
+  .back .contact-label {
+    font-family: 'Outfit', sans-serif;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #3D3456;
+    opacity: 0.5;
+    width: 50px;
+    flex-shrink: 0;
+  }
+
+  .back .contact-value {
+    font-family: 'Outfit', sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    color: #1A1A2E;
+    line-height: 1;
+  }
+
+  .back .contact-value-kr {
+    font-family: 'Pretendard', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0;
+    color: #1A1A2E;
+    line-height: 1.6;
+  }
+
+  /* Bottom-right corner marker */
+  .back .corner-br {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    width: 16px;
+    height: 16px;
+    border-bottom: 1px solid rgba(26,26,46,0.08);
+    border-right: 1px solid rgba(26,26,46,0.08);
+  }
+
+  /* Website URL — bottom left */
+  .back .website {
+    position: absolute;
+    bottom: 44px;
+    left: 72px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 9px;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #1A1A2E;
+    opacity: 0.3;
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== FRONT SIDE ===== -->
+<div class="card-wrapper">
+  <div class="card-label">Front</div>
+  <div class="card front">
+
+    <!-- Corner markers -->
+    <div class="corner-tr"></div>
+    <div class="corner-bl"></div>
+
+    <!-- Logo centered -->
+    <div class="logo-group">
+      <span class="logo-praxia">Praxia</span>
+      <div class="logo-dot"></div>
+      <span class="logo-labs">Labs</span>
+    </div>
+
+    <!-- Accent line -->
+    <div class="accent-line"></div>
+
+    <!-- Tagline -->
+    <div class="tagline-group">
+      <span class="tagline-line">Share Clearer.</span>
+      <span class="tagline-line">Build Sharper.</span>
+      <span class="tagline-line">Scale Smarter.</span>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== BACK SIDE ===== -->
+<div class="card-wrapper">
+  <div class="card-label">Back</div>
+  <div class="card back">
+
+    <!-- Gradient accent bar — right edge -->
+    <div class="accent-bar"></div>
+
+    <!-- Small logo — top left -->
+    <div class="logo-small">
+      <span class="logo-praxia">Praxia</span>
+      <div class="logo-dot"></div>
+      <span class="logo-labs">Labs</span>
+    </div>
+
+    <!-- Name -->
+    <div class="name-row">
+      <span class="name-kr"></span>
+      <span class="name-en"></span>
+    </div>
+
+    <!-- Title -->
+    <div class="title">CEO &amp; Creative Director</div>
+
+    <!-- Divider -->
+    <div class="divider"></div>
+
+    <!-- Contact info -->
+    <div class="contact-group">
+
+      <div class="contact-row">
+        <span class="contact-label">Email</span>
+        <span class="contact-value">andy@praxia-in.com</span>
+      </div>
+
+      <div class="contact-row">
+        <span class="contact-label">Tel</span>
+        <span class="contact-value">+82. 010.6743.8799</span>
+      </div>
+
+      <div class="contact-row">
+        <span class="contact-label">Addr</span>
+        <span class="contact-value-kr">서울특별시 서초구 강남대로 311, 3층</span>
+      </div>
+
+    </div>
+
+    <!-- Bottom corner marker -->
+    <div class="corner-br"></div>
+
+    <!-- Website -->
+    <div class="website">praxia-in.com</div>
+
+  </div>
+</div>
+
+</body>
+</html>
